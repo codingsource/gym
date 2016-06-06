@@ -7,6 +7,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -18,6 +19,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -38,9 +40,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
         LatLng location = new LatLng(-19.92450, -43.93524);
-        mMap.addMarker(new MarkerOptions().position(location).title("Belo Horizonte"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(location));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 13));
+
+        // Add a marker in Sydney and move the camera
+        mMap.addMarker(new MarkerOptions()
+                .title("Belo Horizonte")
+                .snippet("Hello Word!")
+                .position(location)
+        );
+
+        CameraPosition cameraPosition =  CameraPosition.builder()
+                .target(location)
+                .zoom(13)
+                .bearing(90)
+                .build();
     }
 }

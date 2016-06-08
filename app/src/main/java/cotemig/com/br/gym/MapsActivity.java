@@ -3,6 +3,7 @@ package cotemig.com.br.gym;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -58,13 +59,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .build();
     }
 
-    public void clickFavorito() {
+    public void clickFavorito(View view) {
         Intent it =  new Intent(MapsActivity.this, FavoritoActivity.class);
         startActivity(it);
         setContentView(R.layout.activity_favorito);
     }
 
-    public void clickFiltro() {
+    public void clickFiltro(View view) {
         Intent it = new Intent(MapsActivity.this, FiltroActivity.class);
         startActivity(it);
         setContentView(R.layout.activity_filtro);

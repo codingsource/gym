@@ -1,5 +1,6 @@
 package cotemig.com.br.gym;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -55,5 +56,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .zoom(13)
                 .bearing(90)
                 .build();
+    }
+
+    public void clickFavorito() {
+        Intent it =  new Intent(MapsActivity.this, FavoritoActivity.class);
+        startActivity(it);
+        setContentView(R.layout.activity_favorito);
+    }
+
+    public void clickFiltro() {
+        Intent it = new Intent(MapsActivity.this, FiltroActivity.class);
+        startActivity(it);
+        setContentView(R.layout.activity_filtro);
     }
 }

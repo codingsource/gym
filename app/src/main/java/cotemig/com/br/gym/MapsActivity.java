@@ -59,10 +59,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .build();
     }
 
-    public void clickFavorito(View view) {
-        Intent it =  new Intent(MapsActivity.this, FavoritoActivity.class);
+    public void clickBusca(View view) {
+        Intent it =  new Intent(MapsActivity.this, BuscaActivity.class);
         startActivity(it);
-        setContentView(R.layout.activity_favorito);
+        setContentView(R.layout.activity_busca);
     }
 
     public void clickFiltro(View view) {

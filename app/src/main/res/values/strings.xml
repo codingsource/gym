@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Gym</string>
     <string name="title_activity_maps">Map</string>
+    <string name="strBusca">Busca</string>
+    <string name="strCancelar">Cancelar</string>
+    <string name="strFiltros">Filtros</string>
+    <string name="strLimpar">Limpar</string>
+    <string name="strCategorias">Categorias</string>
+    <string name="strLocalizacao">Localização</string>
+    <string name="strOrdernarPor">Ordernar por</string>
+    <string name="strPreco">Preço (R$)</string>
+    <string name="strValorMinimo">Valor Mínimo</string>
+    <string name="strValorMaximo">Valor Máximo</string>
+    <string name="strFiltrar">Filtrar</string>
 </resources>

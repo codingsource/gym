@@ -12,40 +12,38 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|top"
-        android:background="#512b75">
+        android:background="@color/colorPrimary">
 
         <EditText
-            android:layout_width="241dp"
-            android:layout_height="59dp"
+            android:layout_width="@dimen/editBuscaWidht"
+            android:layout_height="@dimen/editBuscaHeight"
             android:layout_gravity="left|top"
-            android:id="@+id/editText"
-            android:inputType="text" />
+            android:id="@+id/editTextBuscaMap"
+            android:inputType="text"
+            android:hint="@string/strBusca"
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/btn_favorito"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/icoWidht"
+            android:layout_height="@dimen/icoHeight"
+            android:layout_marginTop="@dimen/icoMarginTop"
             android:background="@drawable/like"
             android:layout_gravity="right|top"
-            android:layout_marginRight="0dp"
             android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/editText"
+            android:layout_toEndOf="@+id/editTextBuscaMap"
             android:layout_marginStart="10dp" />
 
         <Button
             android:id="@+id/btn_filtro"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/icoWidht"
+            android:layout_height="@dimen/icoHeight"
             android:background="@drawable/filter"
-            android:padding="16dp"
             android:layout_gravity="right|top"
-            android:layout_marginRight="0dp"
             android:onClick="clickFiltro"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"/>
+            android:layout_marginStart="@dimen/icoMarginStarFiltro"
+            android:layout_alignTop="@+id/btn_favorito"
+            android:layout_toEndOf="@+id/btn_favorito" />
 
     </RelativeLayout>
-
 </FrameLayout>

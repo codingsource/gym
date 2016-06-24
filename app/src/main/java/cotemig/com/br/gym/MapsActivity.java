@@ -21,7 +21,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
+<<<<<<< HEAD
 //    EditText editText = (EditText) findViewById(R.id.editText);
+=======
+    EditText editText;
+>>>>>>> master
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+<<<<<<< HEAD
 //        editText.addTextChangedListener(new TextWatcher() {
 //            // depois de terminar de escrever
 //            public void afterTextChanged(Editable s) {}
@@ -44,6 +49,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //                Log.d("Teste",test);
 //            }
 //        });
+=======
+        editText = (EditText) findViewById(R.id.editTextBuscaMap);
+
+        editText.addTextChangedListener(new TextWatcher() {
+            // depois de terminar de escrever
+            public void afterTextChanged(Editable s) {}
+            // antes da ultima edição
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            //edição em tempo real
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String test = editText.getText().toString();
+                Log.d("Teste",test);
+            }
+        });
+>>>>>>> master
     }
 
 
@@ -80,10 +100,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void clickBusca(View view) {
         Intent it =  new Intent(MapsActivity.this, BuscaActivity.class);
         startActivity(it);
+<<<<<<< HEAD
+=======
+//        setContentView(R.layout.activity_busca);
+>>>>>>> master
     }
 
     public void clickFiltro(View view) {
         Intent it = new Intent(MapsActivity.this, FiltroActivity.class);
         startActivity(it);
+<<<<<<< HEAD
+=======
+//        setContentView(R.layout.activity_filtro);
+>>>>>>> master
     }
 }

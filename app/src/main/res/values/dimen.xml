@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="editBuscaWidht">241dp</dimen>
+    <dimen name="editBuscaHeight">59dp</dimen>
+    <dimen name="icoWidht">40dp</dimen>
+    <dimen name="icoHeight">40dp</dimen>
+    <dimen name="icoMarginTop">10dp</dimen>
+    <dimen name="icoMarginStarFiltro">15dp</dimen>
+
+    <dimen name="textSizeItemMenuFiltrar">30dp</dimen>
+    <dimen name="paddingRightFiltrar">10dp</dimen>
+    <dimen name="paddingLeftFiltrar">10dp</dimen>
+    <dimen name="menuHeight">59dp</dimen>
+    <dimen name="editValorWidht">180dp</dimen>
+    <dimen name="marginStar">20dp</dimen>
+    <dimen name="itemHeight">35dp</dimen>
+    <dimen name="textSizeItem">25dp</dimen>
+    <dimen name="textSizeFiltrar">40dp</dimen>
+    <dimen name="btnFiltrarWidht">394dp</dimen>
+    <dimen name="btnFiltrarHeight" >82dp</dimen>
+</resources>

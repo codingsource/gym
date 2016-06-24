@@ -5,47 +5,48 @@
 
     <fragment
         android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        android:layout_height="match_parent"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|top"
-        android:background="#512b75">
+        android:background="@color/colorPrimary">
 
-        <EditText
-            android:layout_width="241dp"
-            android:layout_height="59dp"
+        <Button
+            android:layout_width="@dimen/editBuscaWidht"
+            android:layout_height="@dimen/editBuscaHeight"
             android:layout_gravity="left|top"
             android:id="@+id/editText"
-            android:inputType="text" />
+            android:inputType="text"
+            android:hint="Academias"
+            android:textSize="30sp"
+            android:longClickable="false"
+            android:nestedScrollingEnabled="false"
+            android:onClick="clickBusca" />
 
         <Button
             android:id="@+id/btn_favorito"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/icoWidht"
+            android:layout_height="@dimen/icoHeight"
+            android:layout_marginTop="@dimen/icoMarginTop"
             android:background="@drawable/like"
             android:layout_gravity="right|top"
-            android:layout_marginRight="0dp"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/editText"
             android:layout_marginStart="10dp" />
 
         <Button
             android:id="@+id/btn_filtro"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/icoWidht"
+            android:layout_height="@dimen/icoHeight"
             android:background="@drawable/filter"
-            android:padding="16dp"
             android:layout_gravity="right|top"
-            android:layout_marginRight="0dp"
             android:onClick="clickFiltro"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"/>
+            android:layout_marginStart="@dimen/icoMarginStarFiltro"
+            android:layout_alignTop="@+id/btn_favorito"
+            android:layout_toEndOf="@+id/btn_favorito" />
 
     </RelativeLayout>
-
 </FrameLayout>

@@ -3,7 +3,11 @@ package cotemig.com.br.gym;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -17,6 +21,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
+//    EditText editText = (EditText) findViewById(R.id.editText);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +32,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+//        editText.addTextChangedListener(new TextWatcher() {
+//            // depois de terminar de escrever
+//            public void afterTextChanged(Editable s) {}
+//            // antes da ultima edição
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+//            //edição em tempo real
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {
+//                String test = editText.getText().toString();
+//                Log.d("Teste",test);
+//            }
+//        });
     }
 
 
@@ -62,12 +80,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void clickBusca(View view) {
         Intent it =  new Intent(MapsActivity.this, BuscaActivity.class);
         startActivity(it);
-        setContentView(R.layout.activity_busca);
     }
 
     public void clickFiltro(View view) {
         Intent it = new Intent(MapsActivity.this, FiltroActivity.class);
         startActivity(it);
-        setContentView(R.layout.activity_filtro);
     }
 }

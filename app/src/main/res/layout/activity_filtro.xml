@@ -6,30 +6,30 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:background="#512b75">
+        android:layout_height="@dimen/menuHeight"
+        android:background="@color/colorPrimary">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancelar"
+            android:text="@string/strCancelar"
             android:gravity="left"
             android:paddingLeft="5dp"
-            android:textSize="30dp"
-            android:textColor="#FFF"
+            android:textSize="@dimen/textSizeItemMenuFiltrar"
+            android:textColor="@color/colorIco"
             android:id="@+id/textView2"
             android:layout_centerVertical="true"
             android:layout_alignParentStart="true"
-            android:onClick="onBackPressed"
+            android:onClick="Cancelar"
             android:clickable="true"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Filtros"
+            android:text="@string/strFiltros"
             android:gravity="center"
-            android:textSize="30dp"
-            android:textColor="#FFF"
+            android:textSize="@dimen/textSizeItemMenuFiltrar"
+            android:textColor="@color/colorIco"
             android:id="@+id/textView3"
             android:layout_alignTop="@+id/textView2"
             android:layout_centerHorizontal="true" />
@@ -37,11 +37,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Limpar"
+            android:text="@string/strLimpar"
             android:gravity="right"
-            android:paddingRight="10dp"
-            android:textSize="30dp"
-            android:textColor="#FFF"
+            android:paddingRight="@dimen/paddingRightFiltrar"
+            android:textSize="@dimen/textSizeItemMenuFiltrar"
+            android:textColor="@color/colorIco"
             android:id="@+id/textView4"
             android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
@@ -52,51 +52,127 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="Categorias"
+        android:layout_height="@dimen/itemHeight"
+        android:text="@string/strCategorias"
         android:id="@+id/textView5"
-        android:textSize="25dp"
+        android:textSize="@dimen/textSizeItem"
         android:layout_gravity="left"
-        android:paddingLeft="10dp"
+        android:paddingLeft="@dimen/paddingLeftFiltrar"
         android:gravity="left"
-        android:background="#c4c4c4" />
+        android:background="@color/colorItens" />
 
-    <Spinner
-        android:layout_width="match_parent"
+    <RadioButton
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        />
+        android:text="Malhação"
+        android:id="@+id/radioButton"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Luta"
+        android:id="@+id/radioButton2"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All"
+        android:id="@+id/radioButton3"
+        android:checked="false" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="Localização"
+        android:layout_height="@dimen/itemHeight"
+        android:text="@string/strLocalizacao"
         android:id="@+id/textView6"
-        android:textSize="25dp"
+        android:textSize="@dimen/textSizeItem"
         android:layout_gravity="left"
-        android:paddingLeft="10dp"
+        android:paddingLeft="@dimen/paddingLeftFiltrar"
         android:gravity="left"
-        android:background="#c4c4c4" />
+        android:background="@color/colorItens" />
 
-    <Spinner
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner2"
-        android:layout_gravity="center_horizontal" />
+        android:layout_height="wrap_content">
 
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Norte"
+            android:id="@+id/radioButton4"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sul"
+            android:id="@+id/radioButton5"
+            android:checked="false" />
+
+
+         </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Centro"
+            android:id="@+id/radioButton6"
+            android:checked="false" />
+
+           </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leste"
+            android:id="@+id/radioButton7"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oeste"
+            android:id="@+id/radioButton5"
+            android:checked="false" />
+    </LinearLayout>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="Ordernar por"
+        android:layout_height="@dimen/itemHeight"
+        android:text="@string/strOrdernarPor"
         android:id="@+id/textView7"
-        android:textSize="25dp"
+        android:textSize="@dimen/textSizeItem"
         android:layout_gravity="left"
-        android:paddingLeft="10dp"
+        android:paddingLeft="@dimen/paddingLeftFiltrar"
         android:gravity="left"
-        android:background="#c4c4c4" />
+        android:background="@color/colorItens" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:id="@+id/radioButton8"
+        android:checked="false" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Preço"
+        android:id="@+id/radioButton9"
+        android:checked="false" />
 
     <TextView
-        android:layout_width="175dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Small Text"
@@ -105,42 +181,42 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="Preço (R$)"
+        android:layout_height="@dimen/itemHeight"
+        android:text="@string/strPreco"
         android:id="@+id/textView8"
-        android:textSize="25dp"
+        android:textSize="@dimen/textSizeItem"
         android:layout_gravity="left"
-        android:paddingLeft="10dp"
+        android:paddingLeft="@dimen/paddingLeftFiltrar"
         android:gravity="left"
-        android:background="#c4c4c4" />
+        android:background="@color/colorItens" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <EditText
-            android:layout_width="150dp"
+            android:layout_width="@dimen/editValorWidht"
             android:layout_height="wrap_content"
             android:id="@+id/editText2"
             android:layout_gravity="right"
-            android:hint="Valor Mínimo" />
+            android:hint="@string/strValorMinimo" />
 
         <EditText
-            android:layout_width="210dp"
+            android:layout_width="@dimen/editValorWidht"
             android:layout_height="wrap_content"
             android:id="@+id/editText1"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/editText2"
-            android:layout_marginStart="57dp"
-            android:hint="Valor Máximo" />
+            android:layout_marginStart="@dimen/marginStar"
+            android:hint="@string/strValorMaximo" />
     </RelativeLayout>
 
     <Button
-        android:layout_width="394dp"
-        android:layout_height="82dp"
+        android:layout_width="@dimen/btnFiltrarWidht"
+        android:layout_height="@dimen/btnFiltrarHeight"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:text="Filtrar"
-        android:textSize="40dp" />
+        android:text="@string/strFiltrar"
+        android:textSize="@dimen/textSizeFiltrar" />
 
 </LinearLayout>

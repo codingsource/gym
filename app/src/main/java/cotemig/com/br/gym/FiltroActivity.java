@@ -16,18 +16,22 @@ public class FiltroActivity extends Activity {
         setContentView(R.layout.activity_filtro);
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent it = new Intent(FiltroActivity.this, MapsActivity.class);
-        startActivity(it);
-        setContentView(R.layout.activity_maps);
-        finish();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        Intent it = new Intent(FiltroActivity.this, MapsActivity.class);
+//        startActivity(it);
+//        finish();
+//    }
 
 
     public void Cancelar(View v) {
-        Intent it = new Intent(FiltroActivity.this, MapsActivity.class);
-        startActivity(it);
-        setContentView(R.layout.activity_maps);
+//        Intent it = new Intent(FiltroActivity.this, MapsActivity.class);
+//        startActivity(it);
+//        finish();
+        FiltroActivity.this.finish();
+    }
+
+    public void Limpar(View view) {
+
     }
 }

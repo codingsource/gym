@@ -17,11 +17,7 @@
             android:id="@+id/editText"
             android:inputType="text"
             android:hint="@string/strBusca"
-<<<<<<< HEAD
             android:textSize="30sp" />
-=======
-            android:textSize="30dp" />
->>>>>>> master
 
         <Button
             android:id="@+id/btn_favorito"
